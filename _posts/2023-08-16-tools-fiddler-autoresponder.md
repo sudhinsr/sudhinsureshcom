@@ -50,7 +50,7 @@ During development, it's common to test changes in files such as JavaScript, CSS
 
 By following the method outlined earlier, the provided example demonstrates the use of regular expressions to handle query parameters. Please refer to the image below for a visual representation of a sample configuration:
 
-![img-description](/assets/images/2023-08-16-tools-fiddler-autoresponder_1.JPG){: .left }
+![Autoresponder](/assets/images/2023-08-16-tools-fiddler-autoresponder_1.JPG){: .left }
 _Autoresponder example_
 
 
