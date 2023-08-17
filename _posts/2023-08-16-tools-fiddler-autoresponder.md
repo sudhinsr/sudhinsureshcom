@@ -41,6 +41,8 @@ Let's say you're working on an application that interacts with a server to fetch
 3. **Test the Simulated Response:**
    Now, whenever your application sends a request to the specified API endpoint (`http://api.example.com/user`), Fiddler will intercept the request and respond with the content of the `mock_response.json` file, effectively simulating the response from a local server.
 
+![Autoresponder](/assets/images/2023-08-16-tools-fiddler-autoresponder_1.JPG)
+_Example 1_
 
 **Replacing Files**
 
@@ -50,12 +52,11 @@ During development, it's common to test changes in files such as JavaScript, CSS
 
 By following the method outlined earlier, the provided example demonstrates the use of regular expressions to handle query parameters. Please refer to the image below for a visual representation of a sample configuration:
 
-![Autoresponder](/assets/images/2023-08-16-tools-fiddler-autoresponder_1.JPG){: .left }
-_Autoresponder example_
+![Autoresponder](/assets/images/2023-08-16-tools-fiddler-autoresponder_2.JPG)
+_Example 2_
 
 
 **Advantages of Simulated Local Server Responses**
-
 
 1. **Independent Testing:** By using a simulated local server response, you can test different scenarios without relying on the availability of the actual server. This is particularly useful during development and testing phases.
 
