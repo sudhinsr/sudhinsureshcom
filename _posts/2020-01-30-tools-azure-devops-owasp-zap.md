@@ -9,16 +9,18 @@ comments: true
 **Introduction:**
 In today's interconnected world, ensuring the security of applications is paramount to safeguard against potential threats. A powerful tool for conducting security tests is the OWASP Zed Attack Proxy (ZAP). In this guide, we will walk you through the process of configuring OWASP ZAP within an Azure DevOps release pipeline, enabling you to conduct comprehensive security testing for both API and UI components of your applications.
 
-![Pipeline](/assets/images/2020-01-30-tools-azure-devops-owasp-zap_1.JPG){: .left }
+![Pipeline](/assets/images/2020-01-30-tools-azure-devops-owasp-zap_1.JPG)
 _Pipeline_
+
 
 **1. Agent/Repository Configuration:**
 To initiate the process, you need to set up a repository and include the file named "OWASPToNUnit3.XSLT". This specific file serves as the bridge between the OWASP ZAP security report and the NUnit3 report, which can be readily interpreted by the pipeline. Arrange the artifacts within the repository to facilitate the pipeline's execution.
 
 Select an Ubuntu build agent for the pipeline, especially if you are employing Linux Zap Docker images for testing. In situations involving extended test cases, it is advisable to opt for self-hosted agents or Azure container implementations. For further insights, refer to relevant resources.
 
-![Release pipeline jobs](/assets/images/2020-01-30-tools-azure-devops-owasp-zap_2.JPG){: .left }
+![Release pipeline jobs](/assets/images/2020-01-30-tools-azure-devops-owasp-zap_2.JPG)
 _Release pipeline jobs_
+
 
 **2. Install Docker:**
 Initiate the process by creating a DockerInstaller task within your pipeline. Specify the Docker Version as 17.09.0-ce and choose the Release type as stable.
@@ -54,8 +56,9 @@ Utilize the UniversalPackages task to publish the HTML report to a designated fe
 **6. Publish NUnit Result:**
 Create a PublishTestResults task with the task version set to 2. Select NUnit as the test result format. Set the search folder to $(System.DefaultWorkingDirectory) where the generated report resides. Set the "Test results files" to "Converted-OWASP-ZAP-Report.xml," the transformed test result file.
 
-![Test output](/assets/images/2020-01-30-tools-azure-devops-owasp-zap_3.JPG){: .left }
+![Test output](/assets/images/2020-01-30-tools-azure-devops-owasp-zap_3.JPG)
 _Test output_
+
 
 **Bonus:**
 For API testing, substitute the existing Bash script with the following commands:
