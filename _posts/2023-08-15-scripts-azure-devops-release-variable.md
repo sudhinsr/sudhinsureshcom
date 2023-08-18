@@ -2,7 +2,7 @@
 title: Updating and Using Release Variables in Azure DevOps Classic Release with PowerShell
 date: 2023-08-15
 categories: [Azure, DevOps]
-tags: [fiddler, development, tools]
+tags: [devops, development, scripts]
 comments: true
 ---
 
@@ -35,13 +35,19 @@ Invoke-RestMethod -Uri $releaseurl -Method Put -Body $json -ContentType "applica
 
 ```
 
+To access a variable within the release stage itself, you can utilize the following script:
+
+```powershell
+Write-Host "##vso[task.setvariable variable=<VariableName>]<VariableValue>"
+```
+
+Replace `<VariableName>` with the name of the variable you want to set and `<VariableValue>` with the desired value for that variable.
+
 ## Running the Enhanced Script
 
-1. Replace the placeholders with your actual values.
-
+1. Before running the script, ensure that you enable `Allow scripts to access the OAuth token` in Agent settings under additional options. This will allow the scripts to access the token.
 2. Open PowerShell and navigate to the directory containing the script file.
-
-3. Execute the script by typing `.\UpdateAndUseReleaseVariables.ps1` and pressing Enter.
+3. Pass argument values with the release variable name and the actual values.
 
 ## Conclusion
 
