@@ -1,5 +1,5 @@
 ---
-title: Automating Data Updates: Streamlining Elastic Index Repopulation with Aliases and PowerShell Scripts
+title: Automating Data Updates; Streamlining Elastic Index Repopulation with Aliases and PowerShell Scripts
 date: 2023-06-16
 categories: [Development]
 tags: [elasticsearch, development, tools, powershell]
