@@ -34,7 +34,8 @@ Let's say you're working on an application that interacts with a server to fetch
 
 2. **Set Up Fiddler Autoresponder Rule:**
    - Open Fiddler and navigate to the "Autoresponder" tab.
-   - Enable automatic responses.
+   - Enable **automatic responses**.
+   - Enable **Unmatched requests passthrough**
    - Add a new rule by clicking "Add Rule."
    - In the "Rule Editor," specify the API endpoint you want to intercept (e.g., `http://api.example.com/user`).
    - Choose "Respond with a file" and select the `mock_response.json` file you created earlier.
@@ -57,6 +58,10 @@ By following the method outlined earlier, the provided example demonstrates the 
 ![Autoresponder](/assets/images/2023-08-16-tools-fiddler-autoresponder_2.JPG)
 _Example 2_
 
+```text
+Source:      regex:^(?ix)https://example.com/prod/home/(.*)$
+Destination: C:/local/source/dist/prod/$1
+```
 
 **Advantages of Simulated Local Server Responses**
 
