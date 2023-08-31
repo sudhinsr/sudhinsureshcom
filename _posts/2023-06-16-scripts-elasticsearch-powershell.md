@@ -4,6 +4,9 @@ date: 2023-06-16
 categories: [Development]
 tags: [elasticsearch, development, scripts, powershell, devops]
 comments: true
+image:
+  path: /assets/images/2023-06-16-scripts-elasticsearch-powershell_1.jpg
+  alt: Automation process.
 ---
 
 **Introduction**
@@ -84,7 +87,7 @@ Automating data updates in Elasticsearch is crucial for real-time applications t
 
 4. **Switch Aliases:** Instantly switch the alias to point to the new index, making the new data active for queries.
 
-5. **Alias Update:** Update the alias to point to the new index. The alias name, in this case, is still `country`, but it now points to `country_v1`.
+5. **Alias Update:** Update the alias to point to the new index. The alias name, in this case, is still `country`, but it now points to `country_v2`.
 
     ```powershell
     param (
