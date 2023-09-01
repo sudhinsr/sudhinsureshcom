@@ -23,7 +23,7 @@ Automating data updates in Elasticsearch is crucial for real-time applications t
 
 2. **Create a New Index:** When it's time to update the data, create a new index with a version indicator. For instance, `country_v2`.
 
-    _Assumtion: Index mapping/settings file is present in this particular location "./Elasticsearch/country.json"_
+    _Assumption: Index mapping/settings file is present in this particular location "./Elasticsearch/country.json"_
 
     ```powershell
     param (
