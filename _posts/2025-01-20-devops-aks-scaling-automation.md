@@ -12,8 +12,7 @@ This document explains how to use an **Azure DevOps pipeline** to manage the rep
 
 ## How?
 
-We have created a **CD YAML** file that manages scaling operations:  
-**[aks-scale.yaml](https://dev.azure.com/euromonitor/Passport/_git/DevOps?path=/pipelines/scheduled/aks-scale.yaml)**.  
+Create a **CD YAML** file that manages scaling operations: aks-scale.yaml (source code is available down).  
 This YAML file is utilized by two pipelines with different parameters:
 
 ### 1. **Scale Up**
@@ -56,8 +55,8 @@ parameters:
       - deployment2
 
 variables:
-  aksConnection: 'Dev WE AKS (Passport)-Passport'
-  aksNamespace: 'passport'
+  aksConnection: 'Dev AKS Conection'
+  aksNamespace: 'default'
 
 pool:
   name: 'Scale Set Ubuntu 20.04'
